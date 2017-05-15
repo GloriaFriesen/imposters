@@ -1,0 +1,11 @@
+{ "posts": [{
+    "title": "Post 1",
+    "content": "Best post ever!"
+    }, {
+   "title": "Post 2",
+   "content": "Second best post ever!!"
+   }, {
+  "title": "Post 3",
+  "content": "Third best post ever!!"
+  }]
+}
