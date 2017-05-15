@@ -16,6 +16,7 @@ import { AuthService } from './auth.service';
 import { routing } from './app.routing';
 import { PostListComponent } from './post-list/post-list.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 
@@ -29,14 +30,10 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    LoginPageComponent,
     HomeComponent,
     PostListComponent,
-    NewPostComponent
-=======
-    HomeComponent
->>>>>>> a0bae7d3cdb9b1dd09ba1fe372c6e48a0ed85bb3
+    NewPostComponent,
+    PostDetailComponent  
   ],
   imports: [
     BrowserModule,
