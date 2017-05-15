@@ -14,6 +14,4 @@ export class PostService {
     return this.posts;
   }
 
-
-
 }
