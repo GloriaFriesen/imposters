@@ -15,6 +15,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthService } from './auth.service';
 import { routing } from './app.routing';
+import { PostListComponent } from './post-list/post-list.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 
 
@@ -29,7 +31,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     LoginPageComponent,
-    HomeComponent
+    HomeComponent,
+    PostListComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

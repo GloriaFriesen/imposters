@@ -10,6 +10,7 @@
               {{user.displayName}}
             </div>
           </li>
+          <li><a routerLink="post-list">All Posts</a></li>
           <li *ngIf="!user"><a (click)="this.authService.login()">Login</a></li>
           <li *ngIf="user"><a (click)="this.authService.logout()">Logout</a></li>
           <li><a routerLink="about"><i class="material-icons">info_outline</i></a></li>
