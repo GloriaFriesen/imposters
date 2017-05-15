@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
-import { LoginPageComponent } from './login-page/login-page.component';
 import { HomeComponent } from './home/home.component';
 
 import { AppComponent } from './app.component';
@@ -30,10 +29,14 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     LoginPageComponent,
     HomeComponent,
     PostListComponent,
     NewPostComponent
+=======
+    HomeComponent
+>>>>>>> a0bae7d3cdb9b1dd09ba1fe372c6e48a0ed85bb3
   ],
   imports: [
     BrowserModule,
