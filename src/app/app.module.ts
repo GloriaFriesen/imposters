@@ -33,7 +33,7 @@ export const firebaseConfig = {
     HomeComponent,
     PostListComponent,
     NewPostComponent,
-    PostDetailComponent  
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
