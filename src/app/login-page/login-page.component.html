@@ -2,6 +2,9 @@
   <div class="loginmodal-container">
     <h1>Login to Your Account</h1><br>
     <button class="login loginmodal-submit" (click)="login()">Login With Google</button>
+    <button (click)="logout()">Logout</button>
   </div>
   <h1>{{user?.displayName}}</h1>
+  <h2>{{user?.email}}</h2>
+  <img src={{user?.photoURL}} alt="" />
 </div>

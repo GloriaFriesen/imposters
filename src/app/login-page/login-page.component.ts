@@ -26,4 +26,8 @@ export class LoginPageComponent implements OnInit {
    this.authService.login();
  }
 
+ logout() {
+  this.authService.logout();
+ }
+
 }
