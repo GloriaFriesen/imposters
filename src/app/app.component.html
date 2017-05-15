@@ -1,9 +1,8 @@
 <nav>
  <div class="nav-wrapper">
-   <a href="/" class="brand-logo"><img src="../assets/image/ninja-logo.png">The Imposters</a>
+   <a href="/" class="brand-logo"><img src="../assets/image/ninja-logo.png"></a>
    <ul id="nav-mobile" class="right hide-on-med-and-down">
      <li><a routerLink="post-list">Posts</a></li>
-
      <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
      <li *ngIf="!user" (click)="login()"><a>Login</a></li>
      <!--Link to user's profile -->
@@ -11,4 +10,5 @@
    </ul>
  </div>
 </nav>
+
 <router-outlet></router-outlet>

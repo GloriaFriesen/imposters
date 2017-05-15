@@ -17,6 +17,7 @@ import { PostService } from './post.service';
 import { routing } from './app.routing';
 import { PostListComponent } from './post-list/post-list.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 
@@ -32,9 +33,8 @@ export const firebaseConfig = {
     AppComponent,
     HomeComponent,
     PostListComponent,
-    NewPostComponent
-
-
+    NewPostComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

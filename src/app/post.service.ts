@@ -14,8 +14,14 @@ export class PostService {
     return this.posts;
   }
 
+
   savePost(post){
     this.posts.push(post);
   }
+
+  getPostById(postId: string) {
+  return this.database.object('posts/' + postId);
+}
+
 
 }
