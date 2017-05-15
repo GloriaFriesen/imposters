@@ -4,3 +4,11 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+
+.preLoader {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,15 +1,33 @@
-<!-- <form [formGroup]="postForm">
-  <div class="input-field">
-    <label for="title">Title:</label>
-    <br>
-    <input id="title" type="text" class="materialize-textarea" formControlName="title">
-  </div>
+<div class="row addForm">
+  <form class="col s12" [formGroup]="newPostForm">
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="title" class="materialize-textarea" formControlName="title"></textarea>
+        <label for="title">Title</label>
+      </div>
 
-  <div class="input-field">
-    <label for="content">Content</label>
+    </div>
     <br>
-    <textarea type="text" class="validate" formControlName="content">
-  </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea rows="25" id="content" type="content" class="validate materialize-textarea" formControlName="content" data-length="500"></textarea>
+        <label for="time">Meet Info</label>
+      </div>
+    </div>
 
-  <button class="btn waves-effect waves-light" (click)="addNewPost()">Post!</button>
-</form> -->
+
+    <br>
+    <div class="row formButton">
+      <button class="btn waves-effect waves-light center" (click)="addPost()">Add Post</button>
+    </div>
+  </form>
+</div>
+<div id="warnModal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="warnAction">
+  <div class="modal-content">
+    <h4 class="center-align">Uh Oh! You Forgot Something</h4>
+    <p class="center-align">Please check over the form, you may have missed a field or two....</p>
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="warnModal()">Review Form</a>
+  </div>
+</div>
