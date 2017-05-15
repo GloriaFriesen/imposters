@@ -6,7 +6,7 @@
      <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
      <li *ngIf="!user" (click)="login()"><a>Login</a></li>
      <!--Link to user's profile -->
-     <li *ngIf="user"><a>Welcome, {{user?.displayName}}</a></li>
+     <li *ngIf="user"> <a>{{user?.displayName}}</a></li>
    </ul>
  </div>
 </nav>
