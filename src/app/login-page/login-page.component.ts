@@ -8,6 +8,8 @@ import {AuthService} from "../auth.service";
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
+
+
 export class LoginPageComponent implements OnInit {
   user: any = null;
 
@@ -18,6 +20,10 @@ export class LoginPageComponent implements OnInit {
    this.authService.getCurrentUser().subscribe(user => {
      this.user = user;
    })
+ }
+
+ login(){
+   this.authService.login();
  }
 
 }
