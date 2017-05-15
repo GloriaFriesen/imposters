@@ -1,17 +1,13 @@
-<!-- Dropdown Structure -->
-<ul id="dropdown2" class="dropdown-content">
-  <li *ngIf="!user" (click)="login()"><a >Login</a></li>
-  <li *ngIf="user"><a (click)="logout()">Logout</a></li>
-</ul>
 <nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="/">Sass</a></li>
-      <li><a href="/">Components</a></li>
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
-  </div>
+ <div class="nav-wrapper">
+   <a href="/" class="brand-logo"><img src="../assets/image/ninja-logo.png">The Imposters</a>
+   <ul id="nav-mobile" class="right hide-on-med-and-down">
+     <li><a href="">Posts</a></li>
+
+     <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
+     <li *ngIf="!user" (click)="login()"><a>Login</a></li>
+     <!--Link to user's profile -->
+     <li *ngIf="user"><a>Welcome, {{user?.displayName}}</a></li>
+   </ul>
+ </div>
 </nav>
-<br>
