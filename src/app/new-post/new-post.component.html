@@ -14,8 +14,6 @@
         <label for="time">Meet Info</label>
       </div>
     </div>
-
-
     <br>
     <div class="row formButton">
       <button class="btn waves-effect waves-light center" (click)="addPost()">Add Post</button>
@@ -24,6 +22,10 @@
 </div>
 <div id="warnModal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="warnAction">
   <div class="modal-content">
+    <div class="warningImage">
+      <img class="warningImage" align="middle" src="../assets/image/ninja-logo.png">
+    </div>
+    <br>
     <h4 class="center-align">Uh Oh! You Forgot Something</h4>
     <p class="center-align">Please check over the form, you may have missed a field or two....</p>
   </div>
