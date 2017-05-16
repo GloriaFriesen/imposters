@@ -19,6 +19,8 @@ user: any = null;
 newPostForm: FormGroup;
 warnAction = new EventEmitter;
 category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
+
+
   constructor(private fb: FormBuilder, private postService: PostService, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
@@ -42,7 +44,7 @@ category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
     if(title.length < 0 || content.length < 0) {
       this.warnModal();
     } else {
-      var newPost = new Post(title, content, category, this.user.uid);
+      var newPost = new Post(title, content, category, this.user.displayName);
       this.postService.savePost(newPost);
       this.newPostForm.reset();
       this.router.navigate(['post-list']);

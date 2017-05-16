@@ -6,10 +6,8 @@
         <div class="card-content">
           <h4>{{post.title}}</h4>
           <p>{{post.content}}</p>
-          <p>{{user?.displayName}}</p>
-          <p>{{post.$key}}</p>
-
-
+          <p><strong>Posted By:</strong> {{post.userId}}</p>
+          <!-- <p>{{post.userId}}</p> -->
         </div>
       <div class="card-action">
           <a (click)="goToDetailPage(post)">See More!</a>
