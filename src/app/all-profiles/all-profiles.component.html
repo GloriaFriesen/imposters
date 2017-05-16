@@ -1,9 +1,9 @@
-<div class="" *ngFor="let profile of users | async">
-  {{profile.displayName }}
-  {{profile.bio}}
-  {{profile.location}}
-  {{profile.jobStatus}}
-</div>
-<p>
-
-</p>
+<ul class="collection" *ngFor="let profile of users | async">
+  <li class="collection-item avatar">
+    <img src="{{profile.photoURL}}" alt="" class="circle">
+    <span class="title"><h4>{{profile.displayName}}</h4></span>
+    <p>
+      {{profile.location}}
+    </p>
+  </li>
+</ul>
