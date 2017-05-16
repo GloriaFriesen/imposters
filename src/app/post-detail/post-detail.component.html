@@ -1,4 +1,5 @@
 <div>
-  <h3>{{(postToDisplay | async)?.postTitle}}</h3>
+  <h3>{{(postToDisplay | async)?.title}}</h3>
+  <p>Category: {{(postToDisplay | async)?.category}}</p>
   <p>Content: {{(postToDisplay | async)?.content}}</p>
 </div>
