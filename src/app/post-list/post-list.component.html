@@ -1,11 +1,11 @@
 <div class="input-field">
   <select materialize="material_select" [materializeSelectOptions]="type" >
-     <option value="" disabled selected>Filter By Category</option>
-     <option *ngFor="let name of category" [value]="name">{{name}}</option>
+     <option value="">All Categories</option>
+     <option *ngFor="let name of categoryFilter"  (change)="search(name)" value={{name}}>{{name}}</option>
   </select>
 </div>
 
-<div class="card horizontal" *ngFor="let post of posts | async">
+<div class="card horizontal" *ngFor="let post of posts | async |category:test">
       <div class="card-image">
         <img src="">
       </div>
