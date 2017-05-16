@@ -12,10 +12,10 @@ export class ProfileService {
   }
 
   updateProfile(profile, userUID){
+
     var userInFirebase = this.getUserById(userUID);
     userInFirebase.update({
         bio: profile.bio,
-        joinDate: profile.joinDate,
         location: profile.location,
         jobStatus: profile.jobStatus,
         specialty: profile.specialty,
@@ -25,5 +25,9 @@ export class ProfileService {
     })
   }
 
-  
+  getUserById(userUID){
+    return this.database.object('users/' + userUID)
+  }
+
+
 }

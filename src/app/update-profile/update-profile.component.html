@@ -1,3 +1,38 @@
-<p>
-  update-profile works!
-</p>
+<form class="col s12" [formGroup]="updateForm">
+      <div class="row">
+        <div class="input-field col s6">
+          <textarea id="bio" class="materialize-textarea" formControlName="bio"></textarea>
+          <label for="bio">Bio</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="location" type="text" class="validate" formControlName="location">
+          <label for="location">Location</label>
+        </div>
+        <div class="input-field col s12">
+          <select formControlName="jobStatus" materialize="material_select" [materializeSelectOptions]="jobStatus">
+            <option disabled selected>Job Status</option>
+            <option>Happily Employed</option>
+            <option>Desparately Seeking</option>
+            <option>Employed but Open to Opportunities</option>
+            <option>Freelance and Free</option>
+          </select>
+        </div>
+        <div class="input-field col s6">
+          <input id="specialty" type="text" class="validate" formControlName="specialty">
+          <label for="specialty">Specialty</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="portfolioSite" type="text" class="validate" formControlName="portfolioSite">
+          <label for="portfolioSite">Portfolio Site</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="github" type="text" class="validate" formControlName="github">
+          <label for="github">Github</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="linkedIn" type="text" class="validate" formControlName="linkedIn">
+          <label for="linkedIn">LinkedIn</label>
+        </div>
+      </div>
+      <button (click)='update()' name="button">submit</button>
+    </form>
