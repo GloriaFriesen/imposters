@@ -20,6 +20,8 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { AllProfilesComponent } from './all-profiles/all-profiles.component';
+import { CategoryPipe } from './category.pipe';
+
 
 
 
@@ -38,7 +40,8 @@ export const firebaseConfig = {
     NewPostComponent,
     PostDetailComponent,
     UpdateProfileComponent,
-    AllProfilesComponent
+    AllProfilesComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
