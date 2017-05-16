@@ -1,6 +1,11 @@
-<ul class="collection" *ngFor="let profile of users | async">
+<form id=search-profiles>
+  <label>Search By Name</label>
+  <input type="text" [(ngModel)]="term" name="tes"/>
+</form>
+
+<ul class="collection" *ngFor="let profile of users | async | searchProfiles:term   ">
   <li class="collection-item avatar">
-    <img src="{{profile.photoURL}}" alt="" class="circle">
+    <img src={{profile.photoURL}} alt="photo of {{profile.displayName}}" class="circle">
     <span class="title"><h4>{{profile.displayName}}</h4></span>
     <p>
       {{profile.location}}
