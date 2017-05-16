@@ -4,10 +4,10 @@ import { HomeComponent } from './home/home.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
-
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 const appRoutes: Routes = [
-  
+
   {
     path: 'home',
     component: HomeComponent
@@ -23,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'posts/:id',
     component: PostDetailComponent
+  },
+  {
+    path: 'update-profile',
+    component: UpdateProfileComponent
   }
 
 ];
