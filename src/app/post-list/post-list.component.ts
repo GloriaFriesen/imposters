@@ -57,4 +57,9 @@ search(category){
   this.test = category;
 }
 
+search(category){
+  console.log(category);
+  this.test = category;
+}
+
 }
