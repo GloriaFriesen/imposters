@@ -8,7 +8,6 @@ import { Profile } from './profile.model';
 export class SearchProfilesPipe implements PipeTransform {
 
   transform(users: any, term: any): any {
-    console.log( typeof users,  term)
     if (term === undefined){
       return users;
     } else {

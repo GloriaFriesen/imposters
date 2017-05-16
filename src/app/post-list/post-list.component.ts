@@ -39,6 +39,6 @@ export class PostListComponent implements OnInit {
 
   goToDetailPage(clickedPost) {
     this.router.navigate(['posts', clickedPost.$key]);
-}
+  }
 
 }
