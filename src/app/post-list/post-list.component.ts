@@ -29,7 +29,7 @@ export class PostListComponent implements OnInit {
        this.user = new User(
       dataLastSeen.displayName,
       dataLastSeen.email,
-      dataLastSeen.photoURL,
+      dataLastSeen.photoURL
   )
     });
   }
