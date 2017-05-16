@@ -11,6 +11,10 @@ export class ProfileService {
     this.users = database.list('users');
   }
 
+  getProfiles(){
+    return this.users;
+  }
+
   updateProfile(profile, userUID){
 
     var userInFirebase = this.getUserById(userUID);
