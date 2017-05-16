@@ -11,13 +11,14 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-
+import { ProfileService } from './profile.service';
 import { AuthService } from './auth.service';
 import { PostService } from './post.service';
 import { routing } from './app.routing';
 import { PostListComponent } from './post-list/post-list.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 
 
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     HomeComponent,
     PostListComponent,
     NewPostComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, PostService],
+  providers: [AuthService, PostService, ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
