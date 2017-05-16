@@ -9,6 +9,8 @@ import * as firebase from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { User } from '../user.model';
+import { CategoryPipe } from '../category.pipe';
+
 
 
 @Component({
@@ -19,6 +21,7 @@ import { User } from '../user.model';
 export class PostListComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
   user: User;
+  category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
 
 
   constructor(private router: Router, private postService: PostService, private authService: AuthService) { }
@@ -34,9 +37,8 @@ export class PostListComponent implements OnInit {
     });
   }
 
-  goToDetailPage() {
-    console.log(this.user);
-  // this.router.navigate(['posts', clickedPost.$key]);
+  goToDetailPage(clickedPost) {
+    this.router.navigate(['posts', clickedPost.$key]);
 }
 
 }
