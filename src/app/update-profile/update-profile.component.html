@@ -1,14 +1,17 @@
 <form class="col s12" [formGroup]="updateForm">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">library_books</i>
           <textarea id="bio" class="materialize-textarea" formControlName="bio"></textarea>
           <label for="bio">Bio</label>
         </div>
         <div class="input-field col s6">
-          <input id="location" type="text" class="validate" formControlName="location">
-          <label for="location">Location</label>
+          <i class="material-icons prefix">location_on</i>
+          <input id="location_on" type="text" class="validate" formControlName="location">
+          <label for="location_on">Location</label>
         </div>
-        <div class="input-field col s12">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">work</i>
           <select formControlName="jobStatus" materialize="material_select" [materializeSelectOptions]="jobStatus">
             <option disabled selected>Job Status</option>
             <option>Happily Employed</option>
@@ -18,21 +21,24 @@
           </select>
         </div>
         <div class="input-field col s6">
+          <i class="material-icons prefix">loyalty</i>
           <input id="specialty" type="text" class="validate" formControlName="specialty">
           <label for="specialty">Specialty</label>
         </div>
         <div class="input-field col s6">
-          <input id="portfolioSite" type="text" class="validate" formControlName="portfolioSite">
-          <label for="portfolioSite">Portfolio Site</label>
+          <i class="material-icons prefix">assignment_ind</i>
+          <input id="portfolioSite" type="url" class="validate" formControlName="portfolioSite">
+          <label for="portfolioSite">Portfolio</label>
         </div>
         <div class="input-field col s6">
-          <input id="github" type="text" class="validate" formControlName="github">
-          <label for="github">Github</label>
+          <input id="github" type="url" class="validate" formControlName="github">
+          <label for="github">Github Profile</label>
         </div>
         <div class="input-field col s6">
-          <input id="linkedIn" type="text" class="validate" formControlName="linkedIn">
-          <label for="linkedIn">LinkedIn</label>
+          <input id="linkedIn" type="url" class="validate" formControlName="linkedIn">
+            <label for="linkedIn">LinkedIn Profile</label>
         </div>
       </div>
       <button (click)='update()' name="button">submit</button>
+
     </form>
