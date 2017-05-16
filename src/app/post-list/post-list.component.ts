@@ -21,7 +21,8 @@ import { CategoryPipe } from '../category.pipe';
 export class PostListComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
   user: User;
-  category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
+  categoryFilter: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
+  test: string = "Code Snippet";
 
 
   constructor(private router: Router, private postService: PostService, private authService: AuthService) { }
@@ -39,6 +40,11 @@ export class PostListComponent implements OnInit {
 
   goToDetailPage(clickedPost) {
     this.router.navigate(['posts', clickedPost.$key]);
+}
+
+search(category){
+  console.log(category);
+  this.test = category;
 }
 
 }
