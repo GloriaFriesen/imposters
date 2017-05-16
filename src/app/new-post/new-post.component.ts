@@ -15,6 +15,7 @@ import { PostService } from '../post.service';
 export class NewPostComponent implements OnInit {
 newPostForm: FormGroup;
 warnAction = new EventEmitter;
+categories: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
 
   constructor(private fb: FormBuilder, private postService: PostService, private router: Router) { }
 
@@ -22,6 +23,7 @@ warnAction = new EventEmitter;
     this.newPostForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required],
+      categories: ['', Validators.required],
     })
   }
 
@@ -30,11 +32,11 @@ warnAction = new EventEmitter;
   }
 
   addPost(){
-    var {title, content} = this.newPostForm.value;
+    var {title, content, categories} = this.newPostForm.value;
     if(title.length < 5 || content.length < 10) {
       this.warnModal();
     } else {
-      var newPost = new Post(title, content);
+      var newPost = new Post(title, content, categories);
       this.postService.savePost(newPost);
       this.newPostForm.reset();
       this.router.navigate(['post-list']);

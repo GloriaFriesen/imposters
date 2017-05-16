@@ -1,11 +1,17 @@
 { "posts": [{
+    "userId": "",
     "title": "Post 1",
-    "content": "Best post ever!"
+    "content": "Best post ever!",
+    "category": "Code Snippet"
     }, {
+    "userId": "",
    "title": "Post 2",
-   "content": "Second best post ever!!"
+   "content": "Second best post ever!!",
+   "category": "Job tips"
    }, {
+  "userId": "",
   "title": "Post 3",
-  "content": "Third best post ever!!"
+  "content": "Third best post ever!!",
+  "category": "Cool Tech"
   }]
 }
