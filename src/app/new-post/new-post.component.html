@@ -3,15 +3,15 @@
     <div class="row">
 
     <div class="input-field">
-      <select materialize="material_select" [materializeSelectOptions]="type" formControlName="categories">
+      <select materialize="material_select" [materializeSelectOptions]="type" formControlName="category">
          <option value="" disabled selected>Choose your Category</option>
-         <option *ngFor="let name of categories" [value]="name">{{name}}</option>
+         <option *ngFor="let name of category" [value]="name">{{name}}</option>
       </select>
     </div>
 
       <div class="input-field col s12">
         <textarea id="title" class="materialize-textarea" formControlName="title"></textarea>
-        <label for="title">Title</label>
+        <label for="title">Title</label> 
       </div>
 
     </div>

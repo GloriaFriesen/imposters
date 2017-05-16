@@ -6,8 +6,9 @@
         <div class="card-content">
           <h4>{{post.title}}</h4>
           <p>{{post.content}}</p>
+          <p>{{post.$key}}</p>
         </div>
-        <div class="card-action">
+      <div class="card-action">
           <a (click)="goToDetailPage(post)">See More!</a>
         </div>
       </div>
