@@ -5,7 +5,7 @@ import { Post } from '../post.model';
 import { MaterializeModule } from "angular2-materialize";
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
-import { AuthService } from "../auth.service";
+import { AuthService } from '../auth.service';
 
 
 
