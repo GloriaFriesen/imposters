@@ -32,3 +32,17 @@ img {
   min-height: 177px;
   padding: 10px;
 }
+
+.customBorder {
+  border: solid;
+  padding: 10px;
+}
+
+i {
+  font-size: 24px;
+  float: left;
+}
+
+p {
+  margin: 0 30px;
+}
