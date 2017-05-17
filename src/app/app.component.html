@@ -1,16 +1,19 @@
-<nav>
- <div class="nav-wrapper">
-   <a href="/" class="brand-logo"><img src="../assets/image/ninja-logo.png"></a>
-   <ul id="nav-mobile" class="right hide-on-med-and-down">
-     <li><a routerLink="post-list">Posts</a></li>
-     <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
-     <li *ngIf="!user" (click)="login()"><a>Login</a></li>
-     <!--Link to user's profile -->
-     <li *ngIf="user"><a (click)="userProfile()">My Profile</a></li>
-     <li><a routerLink="all-profiles">All Profiles</a></li>
-   </ul>
- </div>
-</nav>
+<body>
+  <nav>
+   <div class="nav-wrapper">
+     <a href="/" class="brand-logo"><img src="../assets/image/logo.png"></a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a routerLink="post-list">Posts</a></li>
+       <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
+       <li *ngIf="!user" (click)="login()"><a>Login</a></li>
+       <!--Link to user's profile -->
+       <li *ngIf="user"> <a>{{user?.displayName}}</a></li>
+       <li><a routerLink="all-profiles">All Profiles</a></li>
+     </ul>
+   </div>
+  </nav>
 
-
-<router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</body>

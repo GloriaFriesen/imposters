@@ -15,6 +15,9 @@
   </div>
 </nav>
 
+
+
+
 <ul class="collection" *ngFor="let profile of users | async | searchProfiles:term   ">
   <li class="collection-item avatar">
     <img src={{profile.photoURL}} alt="photo of {{profile.displayName}}" class="circle">

@@ -11,7 +11,7 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
 const appRoutes: Routes = [
 
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   },
   {
