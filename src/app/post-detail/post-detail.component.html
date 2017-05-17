@@ -3,9 +3,9 @@
   <p>Category: {{postToDisplay?.category}}</p>
   <p>Content: {{postToDisplay?.content}}</p>
 </div>
-<div *ngIf="ownerMode"class="fixed-action-btn toolbar">
-    <a class="btn-floating btn-large red">
-      <i class="large material-icons">perm_identity</i>
+<div *ngIf="ownerMode" class="fixed-action-btn toolbar">
+    <a class="btn-floating btn-large">
+      <i class="large material-icons waves-light">perm_identity</i>
     </a>
     <ul>
       <li class="waves-effect waves-light"><a (click)="showEdit()"><i class="material-icons">edit</i></a></li>
