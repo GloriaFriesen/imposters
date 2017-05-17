@@ -1,6 +1,6 @@
 <div class="backgroundWhite z-depth-4">
   <div class="input-field">
-    <select materialize="material_select" [materializeSelectOptions]="type" [(ngModel)]='test' >
+    <select class="label" materialize="material_select" [materializeSelectOptions]="type" [(ngModel)]='test' >
        <option value="All">All Categories</option>
        <option *ngFor="let name of categoryFilter" value={{name}}>{{name}}</option>
     </select>
@@ -15,7 +15,7 @@
     <div class="card-action">
         <a id="detailLink" (click)="goToDetailPage(post)">Interested?</a>
         <!-- this button only appears if user logged in is = post creator -->
-         <a *ngIf='user?.uid === post.userId' class="btn-floating btn-mini waves-effect"><i class="material-icons">edit</i></a>
+         <a *ngIf='user?.uid === post.userId' class="btn-floating btn-mini waves-effect" (click)="goToDetailPage(post)"><i class="material-icons">edit</i></a>
          <!-- end  -->
       </div>
     </div>
