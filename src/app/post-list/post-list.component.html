@@ -1,26 +1,23 @@
-<div class="input-field">
-  <select materialize="material_select" [materializeSelectOptions]="type" [(ngModel)]='test' >
-     <option value="All">All Categories</option>
-     <option *ngFor="let name of categoryFilter"   value={{name}}>{{name}}</option>
-  </select>
-</div>
-
-<div class="card horizontal" *ngFor="let post of posts| async | category:test   ">
-      <div class="card-image">
-        <img src="">
+<div class="backgroundWhite z-depth-4">
+  <div class="input-field">
+    <select materialize="material_select" [materializeSelectOptions]="type" [(ngModel)]='test' >
+       <option value="All">All Categories</option>
+       <option *ngFor="let name of categoryFilter" value={{name}}>{{name}}</option>
+    </select>
+  </div>
+  <div class="card horizontal" *ngFor="let post of posts| async | category:test">
+    <div class="card-stacked">
+      <div class="card-content">
+        <h3 class="label">{{post.title}}</h3>
+        <p>{{post.content}}</p>
+        <p><strong>Posted By:</strong> {{post.displayName}} {{post.userId}} {{user.uid}}</p>
       </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <h4>{{post.title}}</h4>
-          <p>{{post.content}}</p>
-          <p><strong>Posted By:</strong> {{post.userId}} {{post.userId}} {{user.uid}}</p>
-
-        </div>
-      <div class="card-action">
+    <div class="card-action">
+        <a id="detailLink" (click)="goToDetailPage(post)">Interested?</a>
         <!-- this button only appears if user logged in is = post creator -->
-         <a *ngIf='user?.uid === post.userId' class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+         <a *ngIf='user?.uid === post.userId' class="btn-floating btn-mini waves-effect"><i class="material-icons">edit</i></a>
          <!-- end  -->
-          <a (click)="goToDetailPage(post)">See More!</a>
-        </div>
       </div>
     </div>
+  </div>
+</div>

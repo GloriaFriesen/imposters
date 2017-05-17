@@ -1,0 +1,34 @@
+.input-field {
+  border-top: 3px  #435f5f;
+  border-style: solid;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: 0;
+}
+
+#detailLink {
+  color: #8ea9a9;
+}
+
+#detailLink:hover {
+  color: #435f5f;
+  cursor: pointer;
+}
+
+.btn-floating {
+  float: right;
+  background-color: #435f5f;
+}
+
+.btn-floating:hover {
+  background: #8ea9a9;
+}
+
+.card-action {
+  min-height: 75px;
+}
+
+.label {
+  font-size: 50px;
+}

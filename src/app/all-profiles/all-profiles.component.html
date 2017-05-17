@@ -3,7 +3,7 @@
   <input id="autocomplete-input" class="autocomplete" type="text" [(ngModel)]="term" name="test">
 </form> -->
 
-
+<div class="backgroundWhite z-depth-4">
 
 <nav>
   <div class="nav-wrapper">
@@ -17,9 +17,6 @@
   </div>
 </nav>
 
-
-
-
 <ul class="collection" *ngFor="let profile of users | async | searchProfiles:term   ">
   <li class="collection-item avatar">
     <img src={{profile.photoURL}} alt="photo of {{profile.displayName}}" class="circle">
@@ -30,3 +27,5 @@
     <a (click)="goToDetailPage(profile)">Visit My Profile Page</a>
   </li>
 </ul>
+
+</div>

@@ -1,3 +1,16 @@
 .btn-floating, a {
   background-color: #8ea9a9;
 }
+
+.label {
+  font-size: 60px;
+}
+
+button {
+  float: right;
+  background-color: #435f5f;
+}
+
+button:hover {
+  background: #8ea9a9;
+}
