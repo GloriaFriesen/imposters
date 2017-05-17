@@ -1,0 +1,13 @@
+h4 {
+  font-style: italic;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 100px;
+}
+
+.homepage {
+  text-align: center;
+  margin-top: 300px;
+}

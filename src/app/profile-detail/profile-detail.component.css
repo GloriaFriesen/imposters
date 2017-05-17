@@ -8,6 +8,7 @@ img {
   /*border: solid black;*/
   padding: 10px;
   margin-top: 70px;
+  background: white;
 }
 
 #name {
@@ -28,19 +29,20 @@ img {
 }
 
 .dateLocationBorder {
-  border: solid;
+  border: solid 2px;
   padding: 10px;
   margin-right: 15px;
 }
 
 #bioBorder {
-  border: solid;
+  border: solid 2px #333 ;
   min-height: 177px;
   padding: 10px;
+
 }
 
 .customBorder {
-  border: solid;
+  border: solid 2px;
   padding: 10px;
 }
 
@@ -51,4 +53,8 @@ i {
 
 p {
   margin: 0 30px;
+}
+
+.z-depth-2 {
+  padding: 10px;
 }
