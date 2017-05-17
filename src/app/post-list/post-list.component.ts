@@ -20,7 +20,7 @@ import { CategoryPipe } from '../category.pipe';
 })
 export class PostListComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
-  user: User;
+  user: any = null;
   categoryFilter: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
   test: string = "Code Snippet";
 
@@ -29,23 +29,16 @@ export class PostListComponent implements OnInit {
 
   ngOnInit() {
     this.posts = this.postService.getPosts();
-     this.authService.getCurrentUser().subscribe(dataLastSeen => {
-       this.user = new User(
-      dataLastSeen.displayName,
-      dataLastSeen.email,
-      dataLastSeen.photoURL
-  )
-    });
+    this.authService.getCurrentUser().subscribe(user => {
+      this.user = user;
+    })
   }
 
   goToDetailPage(clickedPost) {
     this.router.navigate(['posts', clickedPost.$key]);
   }
 
-search(category){
-  console.log(category);
-  this.test = category;
-}
+
 
 
 }
