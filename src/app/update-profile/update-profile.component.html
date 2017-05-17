@@ -31,12 +31,14 @@
           <label for="portfolioSite">Portfolio</label>
         </div>
         <div class="input-field col s6">
+          <i class="fa fa-github material-icons prefix" aria-hidden="true"></i>
           <input id="github" type="url" class="validate" formControlName="github">
-          <label for="github">Github Profile</label>
+          <label class="iconLabel" for="github">Github Profile</label>
         </div>
         <div class="input-field col s6">
+          <i class="fa fa-linkedin material-icons prefix" aria-hidden="true"></i>
           <input id="linkedIn" type="url" class="validate" formControlName="linkedIn">
-            <label for="linkedIn">LinkedIn Profile</label>
+          <label for="linkedIn">LinkedIn Profile</label>
         </div>
       </div>
       <button (click)='update()' name="button">submit</button>
