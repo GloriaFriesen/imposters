@@ -44,7 +44,7 @@ category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
     if(title.length < 0 || content.length < 0) {
       this.warnModal();
     } else {
-      var newPost = new Post(title, content, category, this.user.displayName);
+      var newPost = new Post(title, content, category, this.user.uid);
       this.postService.savePost(newPost);
       this.newPostForm.reset();
       this.router.navigate(['post-list']);
