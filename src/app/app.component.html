@@ -6,10 +6,11 @@
      <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
      <li *ngIf="!user" (click)="login()"><a>Login</a></li>
      <!--Link to user's profile -->
-     <li *ngIf="user"> <a>{{user?.displayName}}</a></li>
+     <li *ngIf="user"><a (click)="userProfile()">My Profile</a></li>
      <li><a routerLink="all-profiles">All Profiles</a></li>
    </ul>
  </div>
 </nav>
+
 
 <router-outlet></router-outlet>

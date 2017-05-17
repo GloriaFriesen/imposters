@@ -1,5 +1,57 @@
 <div>
-  <h3>{{(postToDisplay | async)?.title}}</h3>
-  <p>Category: {{(postToDisplay | async)?.category}}</p>
-  <p>Content: {{(postToDisplay | async)?.content}}</p>
+  <h3>{{postToDisplay?.title}}</h3>
+  <p>Category: {{postToDisplay?.category}}</p>
+  <p>Content: {{postToDisplay?.content}}</p>
+</div>
+<div *ngIf="ownerMode"class="fixed-action-btn toolbar">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">perm_identity</i>
+    </a>
+    <ul>
+      <li class="waves-effect waves-light"><a (click)="showEdit()"><i class="material-icons">edit</i></a></li>
+      <li class="waves-effect waves-light"><a (click)="warnDelete()"><i class="material-icons">delete</i></a></li>
+    </ul>
+  </div>
+<div *ngIf="editClicked"class="row addForm">
+  <form class="col s12" >
+    <div class="row">
+
+    <div class="input-field">
+      <select materialize="material_select" [materializeSelectOptions]="type">
+         <option value="postToDisplay?.category" selected>Choose your Category</option>
+         <option *ngFor="let name of category" [value]="name">{{name}}</option>
+      </select>
+    </div>
+
+      <div class="input-field col s12">
+        <textarea id="title" class="materialize-textarea" value='postToDisplay?.title'></textarea>
+        <label for="title">Title</label> 
+      </div>
+
+    </div>
+    <br>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea rows="25" id="content" type="content" class="validate materialize-textarea" value='postToDisplay?.content'data-length="500"></textarea>
+        <label for="content">Content</label>
+      </div>
+    </div>
+    <br>
+    <div class="row formButton">
+      <button class="btn waves-effect waves-light center" (click)="addPost()">Add Post</button>
+    </div>
+  </form>
+</div>
+<div id="warnModal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="warnAction">
+  <div class="modal-content">
+    <div class="warningImage">
+      <img class="warningImage" align="middle" src="../assets/image/ninja-logo.png">
+    </div>
+    <br>
+    <h4 class="center-align">Uh Oh! You Forgot Something</h4>
+    <p class="center-align">Please check over the form, you may have missed a field or two....</p>
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="warnModal()">Review Form</a>
+  </div>
 </div>
