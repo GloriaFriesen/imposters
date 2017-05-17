@@ -12,7 +12,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { SearchProfilesPipe } from '../search-profiles.pipe';
 
-
 @Component({
   selector: 'app-all-profiles',
   templateUrl: './all-profiles.component.html',
@@ -29,11 +28,9 @@ export class AllProfilesComponent implements OnInit {
     this.authService.getCurrentUser().subscribe(user => {
       this.user = user;
     })
-
-
-
-
-
   }
 
+  goToDetailPage(clickedProfile) {
+    this.router.navigate(['profiles', clickedProfile.$key]);
+  }
 }

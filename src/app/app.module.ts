@@ -22,6 +22,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { AllProfilesComponent } from './all-profiles/all-profiles.component';
 import { CategoryPipe } from './category.pipe';
 import { SearchProfilesPipe } from './search-profiles.pipe';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
 
 
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     UpdateProfileComponent,
     AllProfilesComponent,
     CategoryPipe,
-    SearchProfilesPipe
+    SearchProfilesPipe,
+    ProfileDetailComponent
   ],
   imports: [
     BrowserModule,

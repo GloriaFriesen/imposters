@@ -40,6 +40,26 @@ export class PostListComponent implements OnInit {
 
   goToDetailPage(clickedPost) {
     this.router.navigate(['posts', clickedPost.$key]);
+  }
+
+search(category){
+  console.log(category);
+  this.test = category;
+}
+
+search(category){
+  console.log(category);
+  this.test = category;
+}
+
+search(category){
+  console.log(category);
+  this.test = category;
+}
+
+search(category){
+  console.log(category);
+  this.test = category;
 }
 
 search(category){

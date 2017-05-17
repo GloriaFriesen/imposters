@@ -1,6 +1,6 @@
 <form id=search-profiles>
   <label>Search By Name</label>
-  <input type="text" [(ngModel)]="term" name="tes"/>
+  <input id="autocomplete-input" class="autocomplete" type="text" [(ngModel)]="term" name="test">
 </form>
 
 <ul class="collection" *ngFor="let profile of users | async | searchProfiles:term   ">
@@ -10,5 +10,6 @@
     <p>
       {{profile.location}}
     </p>
+    <a (click)="goToDetailPage(profile)">Visit My Profile Page</a>
   </li>
 </ul>

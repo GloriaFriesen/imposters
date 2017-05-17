@@ -6,6 +6,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { AllProfilesComponent } from './all-profiles/all-profiles.component';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
 const appRoutes: Routes = [
 
@@ -32,6 +33,10 @@ const appRoutes: Routes = [
   {
     path: 'all-profiles',
     component: AllProfilesComponent
+  },
+  {
+    path: 'profiles/:id',
+    component: ProfileDetailComponent
   }
 
 ];
