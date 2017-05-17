@@ -9,7 +9,15 @@ import { Post } from './post.model';
 export class CategoryPipe implements PipeTransform {
 
   transform(input: Post[], desiredCategory) {
-    
+    var output: Post[] = [];
+    if (desiredCategory === 'All' || desiredCategory === null || input === null) {
+        return input;
+    }  else {
+        for (var i = 0; i < input.length; i++) {
+          if (input[i].category.toLowerCase() === desiredCategory.toLowerCase()) {
+              output.push(input[i]);}
+      } return output;
+    }
 
   }
 
