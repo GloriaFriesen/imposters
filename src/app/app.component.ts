@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 
 export class AppComponent implements OnInit {
   user: any = null;
-
+  loginClass: any = 'dropdown-button btn';
+  nologinClass: any = 'test';
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -31,5 +32,11 @@ export class AppComponent implements OnInit {
   this.authService.logout();
   this.router.navigate(['']);
  }
+
+ userProfile(){
+   this.router.navigate(['profiles/', this.user.uid]);
+ }
+
+
 
 }
