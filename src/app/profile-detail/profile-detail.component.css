@@ -67,3 +67,7 @@ button {
 button:hover {
   background: #8ea9a9;
 }
+
+.btn-floating, a {
+  background-color: #8ea9a9;
+}

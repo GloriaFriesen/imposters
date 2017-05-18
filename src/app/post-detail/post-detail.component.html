@@ -33,7 +33,7 @@
         <label class="active" for="content">Content</label>
       </div>
       <div class="row formButton">
-        <button class="btn waves-effect waves-light center" (click)="editPost()">Update Solution</button>
+        <button class="btn waves-effect waves-light center" (click)="editPost()">Edit Post</button>
       </div>
     </form>
   </div>
@@ -47,13 +47,17 @@
     </ul>
   </div>
 </div>
+
 <div id="warnModal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="warnAction">
+  <div class="warningImage">
+    <img class="warningImage" align="middle" src="../assets/image/logo.png">
+  </div>
    <div class="modal-content">
-     <h4 class="center-align">Delete This Post?</h4>
-     <p class="center-align">Think before clicking.....</p>
+     <h4 class="center-align">Delete Your Profile?</h4>
+     <p class="center-align">Are you sure you want to delete your Imposter profile???</p>
    </div>
    <div class="modal-footer">
-     <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="deletePost()">Delete Post</a>
+     <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="deletePost()">Delete my Post</a>
      <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="warnModal()">Cancel</a>
    </div>
  </div>
