@@ -14,7 +14,7 @@
     <div class="card-action">
         <a id="detailLink" (click)="goToDetailPage(post)">Interested?</a>
         <!-- this button only appears if user logged in is = post creator -->
-         <a *ngIf='user?.uid === post.userId' class="btn-floating btn-mini waves-effect" (click)="goToDetailPage(post)"><i class="material-icons">edit</i></a>
+         <!-- <a *ngIf='user?.uid === post.userId' class="btn-floating btn-mini waves-effect" (click)="goToDetailPage(post)"><i class="material-icons">edit</i></a> -->
          <!-- end  -->
       </div>
     </div>

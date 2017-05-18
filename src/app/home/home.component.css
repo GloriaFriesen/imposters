@@ -1,10 +1,15 @@
 h4 {
   font-style: italic;
+  text-shadow: 1px 1px 2px #2d2828;
+  color: #3c3b3b;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 50px;
 }
 
 h1 {
   font-family: 'Abril Fatface', cursive;
-  font-size: 100px;
+  font-size: 150px;
+  text-shadow: 3px 3px 3px #2d2828;
 }
 
 .homepage {
