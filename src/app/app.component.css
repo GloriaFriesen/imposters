@@ -19,3 +19,13 @@ nav {
 #loginText {
   float: left;
 }
+
+#loginNav {
+  min-width: 195px;
+  text-align: center;
+  background-color: #435f5f;
+}
+
+#loginNav:hover {
+  background-color: #8ea9a9;
+}
