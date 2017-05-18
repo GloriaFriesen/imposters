@@ -28,6 +28,7 @@ updatePost(postId, post){
     category: post.category,
     content: post.content,
     title: post.title,
+    websiteLink: post.websiteLink
   })
 }
 
