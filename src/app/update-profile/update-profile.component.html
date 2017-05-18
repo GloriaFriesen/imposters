@@ -5,12 +5,12 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">library_books</i>
           <textarea id="bio" class="materialize-textarea" formControlName="bio"></textarea>
-          <label for="bio">Bio</label>
+          <label class="active" for="bio">Bio</label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">location_on</i>
           <input id="location_on" type="text" class="validate" formControlName="location">
-          <label for="location_on">Location</label>
+          <label class="active" for="location_on">Location</label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">work</i>
@@ -25,22 +25,22 @@
         <div class="input-field col s6">
           <i class="material-icons prefix">loyalty</i>
           <input id="specialty" type="text" class="validate" formControlName="specialty">
-          <label for="specialty">Specialty</label>
+          <label class="active" for="specialty">Specialty</label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">assignment_ind</i>
           <input id="portfolioSite" type="url" class="validate" formControlName="portfolioSite">
-          <label for="portfolioSite">Portfolio</label>
+          <label class="active" for="portfolioSite">Portfolio</label>
         </div>
         <div class="input-field col s6">
           <i class="fa fa-github material-icons prefix" aria-hidden="true"></i>
           <input id="github" type="url" class="validate" formControlName="github">
-          <label class="iconLabel" for="github">Github Profile</label>
+          <label class="active" class="iconLabel" for="github">Github Profile</label>
         </div>
         <div class="input-field col s6">
           <i class="fa fa-linkedin material-icons prefix" aria-hidden="true"></i>
           <input id="linkedIn" type="url" class="validate" formControlName="linkedIn">
-          <label for="linkedIn">LinkedIn Profile</label>
+          <label class="active" for="linkedIn">LinkedIn Profile</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light center" (click)='update()' name="button">submit</button>
