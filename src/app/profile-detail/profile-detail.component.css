@@ -58,3 +58,16 @@ p {
 .z-depth-2 {
   padding: 10px;
 }
+
+button {
+  float: right;
+  background-color: #435f5f;
+}
+
+button:hover {
+  background: #8ea9a9;
+}
+
+.btn-floating {
+  background-color: #8ea9a9;
+}

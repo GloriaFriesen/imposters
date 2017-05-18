@@ -27,3 +27,7 @@ button:hover {
 .contentBox p {
   margin: 0;
 }
+
+.warningImage {
+  text-align: center;
+}

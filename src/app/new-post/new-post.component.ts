@@ -41,7 +41,7 @@ category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
   addPost(){
     console.log(this.user.uid)
     var {title, content, category, userId, userName} = this.newPostForm.value;
-    if(title.length < 0 || content.length < 0) {
+    if(title.length < 5 || content.length < 10) {
       this.warnModal();
     } else {
       var newPost = new Post(title, content, category, this.user.uid, this.user.displayName);

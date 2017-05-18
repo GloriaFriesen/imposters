@@ -5,12 +5,12 @@
     </div>
     <div class="col m9">
       <div class="row">
-        <p class="label" id="name">Name</p>
-        <p class="nameEmailContent">{{profileToDisplay?.displayName}}</p>
+        <p class="label" id="name">{{profileToDisplay?.displayName}}</p>
+        <p class="nameEmailContent" >Name</p>
       </div>
       <div class="row">
-        <p class="label" id="email">Email</p>
-        <p class="nameEmailContent">{{profileToDisplay?.email}}</p>
+        <p class="label" id="email">{{profileToDisplay?.email}}</p>
+        <p class="nameEmailContent">Email</p>
       </div>
     </div>
   </div>
@@ -62,25 +62,25 @@
       <div class="customBorder">
         <i class=" icons material-icons prefix">assignment_ind</i>
         <p class="label">Portfolio</p>
-        <p>{{profileToDisplay?.portfolioSite}}</p>
+        <a target="blank" href="{{profileToDisplay?.portfolioSite}}">{{profileToDisplay?.portfolioSite}}</a>
       </div>
     </div>
     <div class="col m4">
       <div class="customBorder">
         <i class=" icons fa fa-github" aria-hidden="true"></i>
         <p class="label">Github</p>
-        <p>{{profileToDisplay?.github}}</p>
+        <a target="blank" href="{{profileToDisplay?.github}}">{{profileToDisplay?.github}}</a>
       </div>
     </div>
     <div class="col m4">
       <div class="customBorder">
         <i class=" icons fa fa-linkedin" aria-hidden="true"></i>
         <p class="label">LinkedIn</p>
-        <p>{{profileToDisplay?.linkedIn}}</p>
+        <a target="blank" href="{{profileToDisplay?.linkedIn}}">{{profileToDisplay?.linkedIn}}</a>
       </div>
     </div>
   </div>
-</div>
+
 <!--update-profile-controls-->
 <div *ngIf="editClicked" class="row editProfileForm" >
   <form class="col s12" [formGroup]="editProfileForm">
@@ -148,3 +148,4 @@
      <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="warnModal()">Cancel</a>
    </div>
  </div>
+</div>
