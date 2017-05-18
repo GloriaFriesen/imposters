@@ -1,3 +1,12 @@
 .warningImage {
   text-align: center;
 }
+
+button, button:focus {
+  float: right;
+  background-color: #435f5f;
+}
+
+button:hover {
+  background: #8ea9a9;
+}

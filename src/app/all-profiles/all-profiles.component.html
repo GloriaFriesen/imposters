@@ -20,7 +20,7 @@
 <ul class="collection" *ngFor="let profile of users | async | searchProfiles:term   ">
   <li class="collection-item avatar">
     <img src={{profile.photoURL}} alt="photo of {{profile.displayName}}" class="circle">
-    <span class="title"><h4>{{profile.displayName}}</h4></span>
+    <span class="title label"><h4>{{profile.displayName}}</h4></span>
     <p>
       {{profile.location}}
     </p>
