@@ -8,13 +8,14 @@ import * as firebase from 'firebase/app';
 export class AuthService {
   user: Observable<firebase.User>;
   date = new Date();
-  startDate = this.date.getMonth() + "/" + this.date.getDate() + "/" + this.date.getFullYear()
+  startDate = (this.date.getMonth() +1 )+ "/" + this.date.getDate() + "/" + this.date.getFullYear()
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) {
     this.user = afAuth.authState;
   }
 
   login() {
+    console.log(this.startDate);
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
     this.user.subscribe(user => {
       if (user) {
