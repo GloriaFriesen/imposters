@@ -3,18 +3,29 @@
    <div class="nav-wrapper label">
      <a href="/" class="brand-logo"><img src="../assets/image/logo.png"></a>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a routerLink="all-profiles">All Imposters</a></li>
        <li><a routerLink="post-list">Posts</a></li>
-       <li *ngIf="user" (click)="logout()"><a>Logout</a></li>
-       <li *ngIf="!user" (click)="login()"><a>Login</a></li>
+
+
        <!--Link to user's profile -->
-       <li *ngIf="user"> <a>{{user?.displayName}}</a></li>
-       <li><a routerLink="all-profiles">All Profiles</a></li>
-       <li><a routerLink="new-post">Add Post</a></li>
-       <li><a routerLink="update-profile">Update Profile</a></li>
+
+
+       <li *ngIf="!user" (click)="login()"><a id='loginText'><i class="fa fa-google-plus-square" aria-hidden="true" id="loginIcon"></i>Login</a></li>
+
+       <li><a [class]="test(adminMode)" data-activates='dropdown1' >{{user?.displayName}}</a></li>
      </ul>
    </div>
   </nav>
 
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a class='loggedInText' routerLink="new-post"><i class="material-icons">present_to_all</i> Post!</a></li>
+  <li class="divider"></li>
+  <li><a class='loggedInText' routerLink="update-profile"><i class="material-icons">person_pin</i>Profile</a></li>
+  <li class="divider"></li>
+  <li *ngIf="user" (click)="logout()"><a class='loggedInText'><i class="material-icons">recent_actors</i>Logout
+</a></li>
+</ul>
   <div class="container">
     <router-outlet></router-outlet>
   </div>
