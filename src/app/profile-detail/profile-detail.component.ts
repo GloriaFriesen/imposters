@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { FirebaseListObservable } from 'angularfire2/database';
@@ -7,7 +7,7 @@ import { ProfileService } from '../profile.service';
 import { AuthService } from '../auth.service';
 import { MaterializeAction } from 'angular2-materialize';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-detail',
@@ -21,9 +21,11 @@ export class ProfileDetailComponent implements OnInit {
   editProfileForm: FormGroup;
   editClicked: any = null;
   ownerMode: any = null;
+  warnAction = new EventEmitter;
+  Materialize:any;
 
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private location: Location, private profileService: ProfileService, private authService: AuthService) { }
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private location: Location, private profileService: ProfileService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -82,7 +84,26 @@ update(){
   var newProfile = new Profile(bio, location, jobStatus, specialty, portfolioSite, github, linkedIn);
   console.log(this.user.uid);
   this.profileService.updateProfile(newProfile, this.user.uid)
+  this.editClicked = null;
 }
+
+warnDelete(){
+  this.warnModal();
+}
+
+warnModal() {
+  this.warnAction.emit({action:"modal",params:['open']});
+  }
+
+deleteProfile(){
+  if(this.user.uid === this.profileId){
+    this.profileService.deleteProfile(this.profileId);
+    this.authService.logout();
+    this.router.navigate(['']);
+  }
+}
+
+
 
 
 }

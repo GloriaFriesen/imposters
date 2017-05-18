@@ -47,3 +47,13 @@
     </ul>
   </div>
 </div>
+<div id="warnModal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="warnAction">
+   <div class="modal-content">
+     <h4 class="center-align">Delete This Post?</h4>
+     <p class="center-align">Think before clicking.....</p>
+   </div>
+   <div class="modal-footer">
+     <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="deletePost()">Delete Post</a>
+     <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="warnModal()">Cancel</a>
+   </div>
+ </div>

@@ -31,5 +31,10 @@ updatePost(postId, post){
   })
 }
 
+deletePost(postId){
+  var postToDelete = this.getPostById(postId)
+  postToDelete.remove();
+}
+
 
 }

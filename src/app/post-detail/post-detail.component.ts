@@ -7,7 +7,7 @@ import { Post } from '../post.model';
 import { PostService } from '../post.service';
 import { AuthService } from '../auth.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,8 +25,10 @@ ownerMode: any = null;
 warnAction = new EventEmitter;
 category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
 editPostForm: FormGroup;
+Materialize:any;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private route: ActivatedRoute, private location: Location, private postService: PostService) { }
+
+  constructor( private router: Router, private fb: FormBuilder, private authService: AuthService, private route: ActivatedRoute, private location: Location, private postService: PostService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -85,6 +87,20 @@ editPostForm: FormGroup;
   var {title, content, category, userId, userName} = this.editPostForm.value;
     var updatedPost = new Post(title, content, category, this.postToDisplay.userId, this.postToDisplay.displayName);
     this.postService.updatePost(this.postId, updatedPost);
+    this.editClicked = null;
+}
+
+warnDelete(){
+  this.warnModal();
+}
+
+deletePost(){
+  if(this.user.uid === this.postToDisplay.userId) {
+    this.postService.deletePost(this.postId);
+    this.router.navigate(['post-list']);
+  } else{
+    alert("how did you get here?");
+  }
 }
 
 }

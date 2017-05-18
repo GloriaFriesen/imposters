@@ -138,3 +138,13 @@
     <li class="waves-effect waves-light"><a (click)="warnDelete()"><i class=" material-icons">delete</i></a></li>
   </ul>
 </div>
+<div id="warnModal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="warnAction">
+   <div class="modal-content">
+     <h4 class="center-align">Delete Your Profile?</h4>
+     <p class="center-align">Are you sure you want to delete your Imposter profile???</p>
+   </div>
+   <div class="modal-footer">
+     <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="deleteProfile()">Delete my profile</a>
+     <a class="waves-effect modal-close waves-green btn-flat center-align" (click)="warnModal()">Cancel</a>
+   </div>
+ </div>

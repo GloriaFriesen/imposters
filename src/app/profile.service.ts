@@ -33,5 +33,10 @@ export class ProfileService {
     return this.database.object('users/' + userUID)
   }
 
+  deleteProfile(id){
+    var userToDelete = this.getUserById(id);
+    userToDelete.remove();
+  }
+
 
 }
