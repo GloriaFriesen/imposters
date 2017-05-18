@@ -17,6 +17,7 @@
           <select formControlName="jobStatus" materialize="material_select" [materializeSelectOptions]="jobStatus">
             <option disabled selected>Job Status</option>
             <option>Happily Employed</option>
+            <option>Un-Happily Employed</option>
             <option>Desparately Seeking</option>
             <option>Employed but Open to Opportunities</option>
             <option>Freelance and Free</option>
@@ -43,6 +44,6 @@
           <label class="active" for="linkedIn">LinkedIn Profile</label>
         </div>
       </div>
-      <button class="btn waves-effect waves-light center" (click)='update()' name="button">submit</button>
+      <button class="btn waves-effect waves-light " (click)='update()' name="button">submit</button>
     </form>
 </div>
