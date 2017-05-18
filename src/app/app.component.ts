@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {AuthService} from "./auth.service";
 import { Router } from '@angular/router';
 
-
+declare var jQuery: any;
 
 @Component({
   selector: 'app-root',
@@ -13,14 +13,14 @@ import { Router } from '@angular/router';
 
 export class AppComponent implements OnInit {
   user: any = null;
-  loginClass: any = 'dropdown-button btn';
-  nologinClass: any = 'test';
+  adminMode: any;
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
    this.authService.getCurrentUser().subscribe(user => {
      this.user = user;
+     this.test();
    })
  }
 
@@ -36,6 +36,15 @@ export class AppComponent implements OnInit {
  userProfile(){
    this.router.navigate(['profiles/', this.user.uid]);
  }
+
+
+test(){
+  if(this.user){
+     return "";
+  } else {
+    return "dropdown-button btn hide";
+  }
+}
 
 
 

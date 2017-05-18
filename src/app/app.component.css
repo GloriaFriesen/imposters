@@ -7,6 +7,15 @@ nav {
  background-color: #8ea9a9;
 }
 
-.test {
-  display: none;
+#dropdown1 {
+  margin-top: 64px;
+}
+
+#loginIcon {
+  float: right;
+  margin-left: 5px;
+}
+
+#loginText {
+  float: left;
 }
