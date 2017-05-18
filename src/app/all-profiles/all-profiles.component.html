@@ -4,28 +4,25 @@
 </form> -->
 
 <div class="backgroundWhite z-depth-4">
-
-<nav>
-  <div class="nav-wrapper">
-    <form>
-      <div class="input-field">
-        <input id="search" type="search"   [(ngModel)]="term" name="test">
-        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
-  </div>
-</nav>
-
-<ul class="collection" *ngFor="let profile of users | async | searchProfiles:term   ">
-  <li class="collection-item avatar">
-    <img src={{profile.photoURL}} alt="photo of {{profile.displayName}}" class="circle">
-    <span class="title label"><h4>{{profile.displayName}}</h4></span>
-    <p>
-      {{profile.location}}
-    </p>
-    <a (click)="goToDetailPage(profile)">Visit My Profile Page</a>
-  </li>
-</ul>
-
+  <nav>
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search"   [(ngModel)]="term" name="test">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <ul class="collection" *ngFor="let profile of users | async | searchProfiles:term">
+    <li class="collection-item avatar z-depth-3">
+      <img src={{profile.photoURL}} alt="photo of {{profile.displayName}}" class="circle">
+      <span class="title label"><h4>{{profile.displayName}}</h4></span>
+      <p>
+        {{profile.location}}
+      </p>
+      <a (click)="goToDetailPage(profile)">Visit My Profile Page</a>
+    </li>
+  </ul>
 </div>
