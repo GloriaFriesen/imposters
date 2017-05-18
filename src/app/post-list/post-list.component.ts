@@ -20,8 +20,8 @@ import { CategoryPipe } from '../category.pipe';
 export class PostListComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
   user: any = null;
-  categoryFilter: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
-  test: string = "Code Snippet";
+  categoryFilter: string[] = ["All Categories", "Job Tips", "Cool Tech", "Code Snippet"];
+  selected: string = "All Categories";
 
 
   constructor(private router: Router, private postService: PostService, private authService: AuthService) { }

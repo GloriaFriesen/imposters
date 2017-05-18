@@ -82,8 +82,8 @@ editPostForm: FormGroup;
 }
 
   editPost(){
-  var {title, content, category, userId} = this.editPostForm.value;
-    var updatedPost = new Post(title, content, category, this.postToDisplay.userId);
+  var {title, content, category, userId, userName} = this.editPostForm.value;
+    var updatedPost = new Post(title, content, category, this.postToDisplay.userId, this.postToDisplay.displayName);
     this.postService.updatePost(this.postId, updatedPost);
 }
 

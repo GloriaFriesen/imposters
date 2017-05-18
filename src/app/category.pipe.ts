@@ -10,7 +10,7 @@ export class CategoryPipe implements PipeTransform {
 
   transform(input: Post[], desiredCategory) {
     var output: Post[] = [];
-    if (desiredCategory === 'All' || desiredCategory === null || input === null) {
+    if (desiredCategory === 'All Categories' || desiredCategory === null || input === null) {
         return input;
     }  else {
         for (var i = 0; i < input.length; i++) {
