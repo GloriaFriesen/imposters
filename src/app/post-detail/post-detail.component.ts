@@ -44,7 +44,7 @@ editPostForm: FormGroup;
   }
 
 
-  instantiatForm(){
+  instantiateForm(){
     this.editPostForm = this.fb.group({
     title: ['', Validators.required],
     content: ['', Validators.required],
@@ -68,7 +68,7 @@ editPostForm: FormGroup;
   showEdit(){
     if(this.editClicked === null){
       this.editClicked = true;
-      this.instantiatForm();
+      this.instantiateForm();
       this.setForm(this.postToDisplay.category, this.postToDisplay.title, this.postToDisplay.content);
     } else {
       this.editClicked = null;

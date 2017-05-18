@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col m8">
       <div id="bioBorder">
-        <i class="material-icons prefix">library_books</i>
+        <i class=" icons material-icons prefix">library_books</i>
         <p class="label">Bio</p>
         <p>{{profileToDisplay?.bio}}</p>
       </div>
@@ -25,14 +25,14 @@
     <div class="col m4">
       <div class="row">
         <div class="dateLocationBorder">
-          <i class="material-icons prefix">today</i>
+          <i class=" icons material-icons prefix">today</i>
           <p class="label">User Since</p>
           <p>{{profileToDisplay?.startDate}}</p>
         </div>
       </div>
       <div class="row">
         <div class="dateLocationBorder">
-          <i class="material-icons prefix">location_on</i>
+          <i class=" icons material-icons prefix">location_on</i>
           <p class="label">Homebase</p>
           <p>{{profileToDisplay?.location}}</p>
         </div>
@@ -43,14 +43,14 @@
   <div class="row">
     <div class="col m6">
       <div class="customBorder">
-        <i class="material-icons prefix">work</i>
+        <i class=" icons material-icons prefix">work</i>
         <p class="label">Job Status</p>
         <p>{{profileToDisplay?.jobStatus}}</p>
       </div>
     </div>
     <div class="col m6">
       <div class="customBorder">
-        <i class="material-icons prefix">loyalty</i>
+        <i class=" icons material-icons prefix">loyalty</i>
         <p class="label">Specialty</p>
         <p>{{profileToDisplay?.specialty}}</p>
       </div>
@@ -60,24 +60,81 @@
   <div class="row">
     <div class="col m4">
       <div class="customBorder">
-        <i class="material-icons prefix">assignment_ind</i>
+        <i class=" icons material-icons prefix">assignment_ind</i>
         <p class="label">Portfolio</p>
         <p>{{profileToDisplay?.portfolioSite}}</p>
       </div>
     </div>
     <div class="col m4">
       <div class="customBorder">
-        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class=" icons fa fa-github" aria-hidden="true"></i>
         <p class="label">Github</p>
         <p>{{profileToDisplay?.github}}</p>
       </div>
     </div>
     <div class="col m4">
       <div class="customBorder">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <i class=" icons fa fa-linkedin" aria-hidden="true"></i>
         <p class="label">LinkedIn</p>
         <p>{{profileToDisplay?.linkedIn}}</p>
       </div>
     </div>
   </div>
+</div>
+<!--update-profile-controls-->
+<div *ngIf="editClicked" class="row editProfileForm" >
+  <form class="col s12" [formGroup]="editProfileForm">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class=" icons material-icons prefix">library_books</i>
+            <textarea id="bio" class="materialize-textarea" formControlName="bio"></textarea>
+            <label for="bio">Bio</label>
+          </div>
+          <div class="input-field col s6">
+            <i class=" icons material-icons prefix">location_on</i>
+            <input id="location_on" type="text" class="validate" formControlName="location">
+            <label for="location_on">Location</label>
+          </div>
+          <div class="input-field col s6">
+            <i class=" icons material-icons prefix">work</i>
+            <select formControlName="jobStatus" materialize="material_select" [materializeSelectOptions]="jobStatus">
+              <option disabled selected>Job Status</option>
+              <option>Happily Employed</option>
+              <option>Desparately Seeking</option>
+              <option>Employed but Open to Opportunities</option>
+              <option>Freelance and Free</option>
+            </select>
+          </div>
+          <div class="input-field col s6">
+            <i class=" icons material-icons prefix">loyalty</i>
+            <input id="specialty" type="text" class="validate" formControlName="specialty">
+            <label for="specialty">Specialty</label>
+          </div>
+          <div class="input-field col s6">
+            <i class=" icons material-icons prefix">assignment_ind</i>
+            <input id="portfolioSite" type="url" class="validate" formControlName="portfolioSite">
+            <label for="portfolioSite">Portfolio</label>
+          </div>
+          <div class="input-field col s6">
+            <i class=" icons fa fa-github material-icons prefix" aria-hidden="true"></i>
+            <input id="github" type="url" class="validate" formControlName="github">
+            <label class="iconLabel" for="github">Github Profile</label>
+          </div>
+          <div class="input-field col s6">
+            <i class=" icons fa fa-linkedin material-icons prefix" aria-hidden="true"></i>
+            <input id="linkedIn" type="url" class="validate" formControlName="linkedIn">
+            <label for="linkedIn">LinkedIn Profile</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light center" (click)='update()' name="button">submit</button>
+      </form>
+</div>
+<div *ngIf="ownerMode" class="fixed-action-btn toolbar">
+  <a class="btn-floating btn-large">
+    <i class="large material-icons waves-light">perm_identity</i>
+  </a>
+  <ul>
+    <li class="waves-effect waves-light"><a (click)="showEdit()"><i class=" material-icons">edit</i></a></li>
+    <li class="waves-effect waves-light"><a (click)="warnDelete()"><i class=" material-icons">delete</i></a></li>
+  </ul>
 </div>

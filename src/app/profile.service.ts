@@ -33,4 +33,5 @@ export class ProfileService {
     return this.database.object('users/' + userUID)
   }
 
+
 }
