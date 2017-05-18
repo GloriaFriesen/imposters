@@ -1,8 +1,17 @@
 <div class="backgroundWhite z-depth-4">
   <div>
     <h3 class="label">{{postToDisplay?.title}}</h3>
-    <p>Category: {{postToDisplay?.category}}</p>
-    <p>Content: {{postToDisplay?.content}}</p>
+    <div class="row">
+      <div class="col m6">
+        <h5>Posted By: {{postToDisplay?.userName}}</h5>
+      </div>
+      <div class="col m6">
+        <h5 class="text-align">Category: {{postToDisplay?.category}}</h5>
+      </div>
+    </div>
+    <div class="contentBox z-depth-2">
+        <p>{{postToDisplay?.content}}</p>
+    </div>
   </div>
   <div *ngIf="editClicked" class="row editPostForm" >
     <form class="col s12" [formGroup]="editPostForm">

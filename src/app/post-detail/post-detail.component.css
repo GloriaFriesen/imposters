@@ -14,3 +14,16 @@ button {
 button:hover {
   background: #8ea9a9;
 }
+
+.text-align {
+  text-align: right;
+}
+
+.contentBox {
+  background-color: white ;
+  padding: 25px;
+}
+
+.contentBox p {
+  margin: 0;
+}
