@@ -22,5 +22,14 @@ export class PostService {
   return this.database.object('posts/' + postId);
 }
 
+updatePost(postId, post){
+   var postToUpdate = this.getPostById(postId);
+  postToUpdate.update({
+    category: post.category,
+    content: post.content,
+    title: post.title,
+  })
+}
+
 
 }
