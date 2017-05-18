@@ -31,6 +31,7 @@ category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
       title: ['', Validators.required],
       content: ['', Validators.required],
       category: ['', Validators.required],
+      websiteLink: ['', Validators.required]
         })
   }
 
@@ -40,11 +41,11 @@ category: string[] = ["Code Snippet", "Job Tips", "Cool Tech"];
 
   addPost(){
     console.log(this.user.uid)
-    var {title, content, category, userId, userName} = this.newPostForm.value;
+    var {title, content, category, userId, userName, websiteLink} = this.newPostForm.value;
     if(title.length < 5 || content.length < 10) {
       this.warnModal();
     } else {
-      var newPost = new Post(title, content, category, this.user.uid, this.user.displayName);
+      var newPost = new Post(title, content, category, this.user.uid, this.user.displayName, websiteLink);
       this.postService.savePost(newPost);
       this.newPostForm.reset();
       this.router.navigate(['post-list']);

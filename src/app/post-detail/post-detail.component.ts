@@ -51,6 +51,7 @@ Materialize:any;
     title: ['', Validators.required],
     content: ['', Validators.required],
     category: ['', Validators.required],
+    websiteLink: ['', Validators.required]
     })
   }
 
@@ -71,21 +72,22 @@ Materialize:any;
     if(this.editClicked === null){
       this.editClicked = true;
       this.instantiateForm();
-      this.setForm(this.postToDisplay.category, this.postToDisplay.title, this.postToDisplay.content);
+      this.setForm(this.postToDisplay.category, this.postToDisplay.title, this.postToDisplay.content, this.postToDisplay.websiteLink);
     } else {
       this.editClicked = null;
     }
   }
 
-  setForm(category: string, title: string, content: string){
+  setForm(category: string, title: string, content: string, websiteLink: string){
   this.editPostForm.controls['category'].setValue(category);
   this.editPostForm.controls['title'].setValue(title);
   this.editPostForm.controls['content'].setValue(content);
+  this.editPostForm.controls['websiteLink'].setValue(websiteLink);
 }
 
   editPost(){
-  var {title, content, category, userId, userName} = this.editPostForm.value;
-    var updatedPost = new Post(title, content, category, this.postToDisplay.userId, this.postToDisplay.displayName);
+  var {title, content, category, userId, userName, websiteLink} = this.editPostForm.value;
+    var updatedPost = new Post(title, content, category, this.postToDisplay.userId, this.postToDisplay.displayName, websiteLink);
     this.postService.updatePost(this.postId, updatedPost);
     this.editClicked = null;
 }

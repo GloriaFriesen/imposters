@@ -11,6 +11,7 @@
     </div>
     <div class="contentBox z-depth-2">
         <p>{{postToDisplay?.content}}</p>
+        <a target="blank" href="{{postToDisplay?.websiteLink}}">{{postToDisplay?.websiteLink}}</a>
     </div>
   </div>
   <div *ngIf="editClicked" class="row editPostForm" >
@@ -28,9 +29,17 @@
           <label class="active" for="title">Title</label>
         </div>
       </div>
-      <div class="input-field col s12">
-        <textarea  rows="8" cols="40" formControlName='content' class="materialize-textarea"></textarea>
-        <label class="active" for="content">Content</label>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea  rows="8" cols="40" formControlName='content' class="materialize-textarea"></textarea>
+          <label class="active" for="content">Content</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea  rows="8" cols="40" formControlName='websiteLink' class="materialize-textarea"></textarea>
+          <label class="active" for="websiteLink">Helpful Website URL</label>
+        </div>
       </div>
       <div class="row formButton">
         <button class="btn waves-effect waves-light center" (click)="editPost()">Edit Post</button>
