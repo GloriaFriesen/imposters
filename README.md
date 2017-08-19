@@ -4,7 +4,7 @@
  _Gloria Friesen, Megan Warnock, Chance Magno, and Liam Stabeno_
 
 ### The Current Version
-v1.0 - 05.18.2017
+v1.1 - 05.18.2017
 
 ### The Description
 
@@ -14,7 +14,35 @@ Web based blog site for coding, especially targeted for current bootcamp enrolle
 
 People new to the coding world and feeling a bit uneasy about their place in it.
 
-## The Database Configuration
+### The Website
+[imposters.com](https://imposters-6a4f4.firebaseapp.com)
+
+
+## The Architecture
+
+* Visit our [Trello board](https://trello.com/b/Y54cdMiA) for a visualization of our organizational methods and application structure.
+
+## The Bugs
+We'll see.
+
+## The Contact Details
+Questions? Concerns? Suggestions? Reach out to us via github:
+* [Gloria Friesen](https://github.com/GloriaFriesen)
+* [Megan Warnock](https://github.com/warnock)
+* [Chance Magno](https://github.com/ChanceMagno)
+* [Liam Stabeno](https://github.com/MLiamS)
+
+
+## The Technologies
+* _Angular2.js_
+* _TypeScript_
+* _HTML_
+* _CSS_
+* _npm_
+* _Materialize_
+
+## The Development Environment Setup
+#### Database Configuration
 
 This application is built to work with a Firebase database. If you'd like to enjoy our website, please follow these instructions to create a Firebase project and credentials.
 * Go to [Firebase](https://firebase.google.com/) and create an account (if you don't have one already).
@@ -50,7 +78,7 @@ This application is built to work with a Firebase database. If you'd like to enj
   * Select Import JSON from this menu. This will result in a modal window prompting you to upload a file.
   * Locate the sample-posts.json file from the project, and upload it.
 
-## The Installation
+#### Installation
 
 * In the terminal, run:
   * `$ git clone <https://github.com/warnock/imposters>`
@@ -59,28 +87,10 @@ This application is built to work with a Firebase database. If you'd like to enj
   * `$ ng serve`
 * In your browser, go to [http://localhost:4200](http://localhost:4200)
 
-## The Architecture
-
-* Visit our [Trello board](https://trello.com/b/Y54cdMiA) for a visualization of our organizational methods and application structure.
-
-## The Bugs
-We'll see.
-
-## The Contact Details
-Questions? Concerns? Suggestions? Reach out to us via github:
-* [Gloria Friesen](https://github.com/GloriaFriesen)
-* [Megan Warnock](https://github.com/warnock)
-* [Chance Magno](https://github.com/ChanceMagno)
-* [Liam Stabeno](https://github.com/MLiamS)
-
-
-## The Technologies
-* _Angular2.js_
-* _TypeScript_
-* _HTML_
-* _CSS_
-* _npm_
-* _Materialize_
+#### Deploy to Firebase
+  * Install Firebase CLI: `$ npm install -g firebase-tools`
+  * `$ ng build`
+  * `$ firebase deploy`
 
 ## The License
 This software is licensed under the MIT license.
