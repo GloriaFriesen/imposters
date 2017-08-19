@@ -44,7 +44,7 @@ img {
   float: left;
 }
 
-p {
+p, a {
   margin: 0 30px;
 }
 
