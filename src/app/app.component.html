@@ -7,7 +7,6 @@
        <li><a routerLink="post-list">Solutions</a></li>
        <!--Link to user's profile -->
        <li *ngIf="!user" (click)="login()"><a id='loginText'><i class="fa fa-google-plus-square" aria-hidden="true" id="loginIcon"></i>Login</a></li>
-
        <li><a id="loginNav" [class]="test(adminMode)" data-activates='dropdown1'>Hello, {{user?.displayName}}</a></li>
      </ul>
    </div>

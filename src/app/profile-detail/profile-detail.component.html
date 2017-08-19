@@ -8,34 +8,34 @@
         <p class="label" id="name">{{profileToDisplay?.displayName}}</p>
         <p class="nameEmailContent" >Name</p>
       </div>
-      <div class="row">
-        <p class="label" id="email">{{profileToDisplay?.email}}</p>
-        <p class="nameEmailContent">Email</p>
-      </div>
+    </div>
+    <div>
+      <p class="label" id="email">{{profileToDisplay?.email}}</p>
+      <p class="nameEmailContent">Email</p>
     </div>
   </div>
   <div class="row">
-    <div class="col m8">
+    <div class="col m12">
       <div id="bioBorder">
         <i class=" icons material-icons prefix">library_books</i>
         <p class="label">Bio</p>
         <p>{{profileToDisplay?.bio}}</p>
       </div>
     </div>
-    <div class="col m4">
-      <div class="row">
-        <div class="dateLocationBorder">
-          <i class=" icons material-icons prefix">today</i>
-          <p class="label">User Since</p>
-          <p>{{profileToDisplay?.startDate}}</p>
-        </div>
+  </div>
+  <div class="row">
+    <div class="col m6">
+      <div class="customBorder">
+        <i class=" icons material-icons prefix">today</i>
+        <p class="label">User Since</p>
+        <p>{{profileToDisplay?.startDate}}</p>
       </div>
-      <div class="row">
-        <div class="dateLocationBorder">
-          <i class=" icons material-icons prefix">location_on</i>
-          <p class="label">Homebase</p>
-          <p>{{profileToDisplay?.location}}</p>
-        </div>
+    </div>
+    <div class="col m6">
+      <div class="customBorder">
+        <i class=" icons material-icons prefix">location_on</i>
+        <p class="label">Homebase</p>
+        <p>{{profileToDisplay?.location}}</p>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
     </div>
     <div class="col m6">
       <div class="customBorder">
-        <i class=" icons material-icons prefix">loyalty</i>
+        <i class="icons material-icons prefix">loyalty</i>
         <p class="label">Specialty</p>
         <p>{{profileToDisplay?.specialty}}</p>
       </div>
@@ -58,21 +58,25 @@
   </div>
 
   <div class="row">
-    <div class="col m4">
+    <div class="col m12">
       <div class="customBorder">
         <i class=" icons material-icons prefix">assignment_ind</i>
         <p class="label">Portfolio</p>
         <a target="blank" href="{{profileToDisplay?.portfolioSite}}">{{profileToDisplay?.portfolioSite}}</a>
       </div>
     </div>
-    <div class="col m4">
+  </div>
+  <div class="row">
+    <div class="col m12">
       <div class="customBorder">
         <i class=" icons fa fa-github" aria-hidden="true"></i>
         <p class="label">Github</p>
         <a target="blank" href="{{profileToDisplay?.github}}">{{profileToDisplay?.github}}</a>
       </div>
     </div>
-    <div class="col m4">
+  </div>
+  <div class="row">
+    <div class="col m12">
       <div class="customBorder">
         <i class=" icons fa fa-linkedin" aria-hidden="true"></i>
         <p class="label">LinkedIn</p>

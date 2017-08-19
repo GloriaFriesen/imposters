@@ -5,7 +5,6 @@ img {
 }
 
 .container {
-  /*border: solid black;*/
   padding: 10px;
   margin-top: 70px;
   background: white;
@@ -26,12 +25,6 @@ img {
 .nameEmailContent {
   font-size: 20px;
   margin-top: 8px;
-}
-
-.dateLocationBorder {
-  border: solid 2px;
-  padding: 10px;
-  margin-right: 15px;
 }
 
 #bioBorder {
